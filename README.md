@@ -6,57 +6,65 @@ Har bir misolda kodlar orqali loopning ishlash tartibini va amaliy misollarni si
 ---
 
 ## 📚 O‘rganganlarim / What I learned
+**For Loop** (Takrorlash operatori):  
 
-**For Loop (Sikl operatori)**  
-- Kodni bir necha marta avtomatik takrorlash imkonini beradi.  
-- Sintaksisi:
-
+Sintaksisi:  
 ```javascript
-for (boshlang'ich; shart; o'zgaruvchi oshirish) {
-    // takrorlanadigan kod
+for (boshlangich; shart; qadam) {
+    // takrorlanadigan kodlar
 }
 
-Amaliy misol: 0 dan a gacha bo‘lgan juft sonlar yig‘indisini topish
 
-Juft sonni tekshirish: i % 2 === 0
+boshlangich – loop boshlanish qiymati
 
-Yig‘indini hisoblash: sum += i
+shart – loop qachon to‘xtashini belgilaydi
+
+qadam – har bir takrorlashdan keyin qiymat qanday o‘zgarishini bildiradi
+
+➤ Kodni bir necha marta takrorlash uchun ishlatiladi.
 
 ---
 
 ## 💻 Kod namunasi / Example code
 
-```javascript
-let a = 10;      // a soni
-let sum = 0;     // yig'indini saqlash uchun o'zgaruvchi
-
-for (let i = 0; i <= a; i++) {   // 0 dan a gacha loop
-    if (i % 2 === 0) {           // i juft bo'lsa
-        sum += i;                // sum ga qo'shish
-    }
+// 1️⃣ Oddiy for loop
+for (let i = 1; i <= 5; i++) {
+    console.log("Salom, dunyo!", i);
 }
 
-console.log(sum); // Natija: 30
+// 2️⃣ Array elementlarini for loop bilan chiqarish
+let fruits = ["Olma", "Banan", "Anor"];
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+
+// 3️⃣ Nested for loop (ichma-ich loop)
+for (let i = 1; i <= 3; i++) {
+    for (let j = 1; j <= 2; j++) {
+        console.log(`i = ${i}, j = ${j}`);
+    }
+}
 
 ---
 
 🧩 Qisqacha nazariya / Short Theory
 
-🔹 For Loop: Kodni bir necha marta avtomatik takrorlash imkonini beradi.
+🔹 For loop — kodni belgilangan sonlarda takrorlash uchun ishlatiladi.
+🔹 Boshlangich, shart va qadam orqali loop’ning ishlashini boshqarish mumkin.
+🔹 Nested (ichma-ich) loop orqali bir nechta loop’larni birgalikda ishlatish mumkin.
 
 
 
 🎯 Maqsad / Goal
 
-JavaScript’da taqqoslash operatorlarini ishlatishni o‘rganish.
+JavaScript’da for loop’ni ishlatishni o‘rganish
 
-If-Else statements yordamida shartlarni tekshirish va kodni shartga qarab boshqarish.
+Array yoki qiymatlarni takrorlab ishlash
 
-Mantiqiy operatorlar yordamida bir nechta shartni birlashtirish va inkor qilishni tushunish.
-
-O‘rgangan nazariya va operatorlarni oddiy amaliy misollar orqali mustahkamlash.
+Nested loop konseptini tushunish va qo‘llash
 
 💬 Muallif / Author
 
 ✍️ Shokhjahon Qalandarov
-📅 Dars: 5-kun — Comparison Operators, if else & Logical Operators
+📅 Dars: 6-kun — For Loop
